@@ -34,3 +34,5 @@ console.log(person1.introduce());
 // Method: study(subject) → adds a subject into subjects if not already included
 // Method: getInfo() → "Student: Name, Grade: X, Subjects: ..." 
 
+
+console.log("HEllO");
