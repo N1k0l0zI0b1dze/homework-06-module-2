@@ -56,3 +56,34 @@ console.log(person1.addSubject("CSS"));
 // Extra properties: subject, salary
 // Method: teach() → "Mr/Ms. X is teaching Y"
 // Method: getInfo() → "Teacher: Name, Subject: X, Salary: Y"
+
+
+class Teacher extends Person {
+  subject = null;
+  salary = null;
+
+  constructor(name, age, subject, salary){
+    super(name, age);
+    this.subject = subject;
+    this.salary = salary;
+  }
+
+  teach = () => {
+    return `Mr/Ms. ${this.name} is teaching ${this.subject}`;
+  };
+  
+  getTeacherInfo = () => {
+    return `Teacher: ${this.name}, Subject: ${this.subject}, Salary: ${this.salary}`;
+  };
+}
+
+const teacher = new Teacher("Nikoloz", 30, "JS", 30000);
+
+console.log(teacher.teach());
+console.log(teacher.getTeacherInfo());
+
+
+// 4 Create a class Classroom
+// Properties: teacher (one), students (array)
+// Method: addStudent(student) → adds a student
+// Method: listMembers() → logs teacher and all students with their info
